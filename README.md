@@ -18,6 +18,8 @@ request/responses and only has to care about passing the messages.
 Extending the features of the communicator would then only involve adding new
 Request/Response class types and keep the communicator class itself untouched.
 
+An example use case of this pattern is my [PyKMP library][PyKMP docs API examples].
+
 ## Example / demo 🚀
 
 ```python
@@ -92,4 +94,5 @@ It means that any class that confirms to the protocol (in this case implementing
     +foobar/server_expected_failure.py:13: error: Value of type variable as keyword argument "request_type" in "handle_incoming_request" of "MyServer" cannot be "BarRequest" (class attribute "response_type" does not implement protocol "ServerContextResponse")  [type-var]
     ```
 
+[PyKMP docs API examples]: https://gertvdijk.github.io/PyKMP/getting-started/#api-examples
 [mypy-5144]: https://github.com/python/mypy/issues/5144#issuecomment-1001222212
